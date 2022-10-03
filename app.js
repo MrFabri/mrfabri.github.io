@@ -27,6 +27,12 @@ function addTodo(e){
         alert_msg.classList.add('alert_msg_display');
         return;
     }
+
+    if (text.length >= 20 ) {
+        alert_msg.innerHTML = 'The text is too long';
+        alert_msg.classList.add('alert_msg_display');
+        return;
+    }
     alert_msg.classList.remove('alert_msg_display');
     alert_msg.innerHTML = "";
 
