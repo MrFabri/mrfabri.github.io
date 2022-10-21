@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(88, 133, 181);
+    color: white;
+}
+
+header, form, .todo-container, .alert_msg{
+    min-height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert_msg_cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.alert_msg {
+    display: none;
+    min-height: 0;
+    padding: 0.5rem;
+    color: rgb(255, 42, 42);
+    border-radius: 4px;
+    margin-bottom: 0.4rem;
+    background-color: white;
+    font-size: 14px;
+}
+
+.alert_msg_display {
+    display: block;
+}
+
+header { 
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.todo-container {
+    min-height: 70vh;
+    align-items: flex-start;
+}
+
+/* INPUT +  BUTTON */
+.todo-input, .todo-button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+    outline: none;
+    border-radius: 4px;
+}
+
+.todo-button {
+    margin-left: 0.5rem;
+    color: rgb(91, 106, 209);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.todo-button:hover {
+    background-color: rgb(91, 106, 209);
+    color: white;
+}
+
+
+/* Todo list */
+.todo-list {
+    list-style: none;
+    width: 50rem;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-radius: 4px 5px 5px 4px;
+}
+
+.todo-item {
+    flex: 1;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+.todo-item:hover {
+    text-decoration: line-through;
+}
+
+.trash-btn, 
+.complete-btn {
+    background-color: rgb(91, 106, 209);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.complete-btn{
+    background-color: rgb(31, 205, 25);
+}
+
+.trash-btn { border-radius: 0 4px 4px 0; }
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+footer {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+footer > p {
+    width: 100%;
+    text-align: center;
+}
+
+footer a{
+    color: rgb(5, 74, 177);
+}
+
+/* Animations */
+
+.appear {
+    animation: appear 1s ease-in-out;
+}
+
+.blink {
+    animation: blinker .8s linear 1;
+}
+
+.fadein {
+    animation: fadein .5s ease-in;
+}
+
+.fadeout {
+    animation: fadeout .5s ease-in;
+}
+@keyframes appear {
+    0% {
+        transform: translateY(-5%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+
+@keyframes fadein {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}
+
