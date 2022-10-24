@@ -103,6 +103,11 @@ function delete_or_complete(e) {
 
         setTimeout(() => {
             todo.remove(); // Deletes the todo div
+
+            // Updates the task complete value
+            const completeMsg = document.querySelector('.taskCompleted');
+            const completed = document.querySelectorAll(".completed");
+            completeMsg.innerHTML = `Tasks completed: ${completed.length}`
         }, 400);
     }
 
